@@ -11,7 +11,8 @@ namespace Calculator.Infrastructure.Database
     public class HistoryContext : DbContext, IHistoryContext
     {
         public HistoryContext(DbContextOptions<HistoryContext> options) : base(options) { }
-        public DbSet<History> History { get; set; }
+
+        public DbSet<History> Histories { get; set; }
 
         public Task<int> SaveChangesAsync()
         {

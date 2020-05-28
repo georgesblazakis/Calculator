@@ -32,9 +32,9 @@ namespace Calculator.Test.UnitTests.Application
 
         [Theory]
         [InlineData(37.60, 98, -60.4)]
-        [InlineData(5, 35, -35)]
+        [InlineData(5, 35, -30)]
         [InlineData(-69, 8, -77)]
-        [InlineData(-9, -5, -14)]
+        [InlineData(-9, -5, -4)]
         [InlineData(0, 5, -5)]
         public void GivenTwoNumbers_ShouldSubThem(Decimal number1, Decimal number2, Decimal expected)
         {
@@ -53,10 +53,10 @@ namespace Calculator.Test.UnitTests.Application
         }
 
         [Theory]
-        [InlineData(37.60, 98, 0.38)]
-        [InlineData(5, 35, 0.14)]
-        [InlineData(-69, 8, -8.62)]
-        [InlineData(-9, -5, 1.8)]
+        [InlineData(180, 4, 45)]
+        [InlineData(5, 10, 0.5)]
+        [InlineData(-100, 8, -12.5)]
+        [InlineData(-10, -2, 5)]
         [InlineData(0, 5, 0)]
         public void GivenTwoNumbers_ShouldDivThem(Decimal number1, Decimal number2, Decimal expected)
         {
@@ -65,9 +65,9 @@ namespace Calculator.Test.UnitTests.Application
 
         [Theory]
         [InlineData(10, 0)]
-        public async Task GivenTwoNumbers_ShouldException(Decimal number1, Decimal number2)
+        public void GivenTwoNumbers_ShouldException(Decimal number1, Decimal number2)
         {
-            //await Assert.ThrowsAsync<Exception>(() => calculatorFunctionsCommandHandler.HandleDiv(number1, number2));
+            Assert.Throws<Exception>(() => calculatorFunctionsCommandHandler.HandleDiv(number1, number2));
 
         }
 

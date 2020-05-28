@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.Infrastructure",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.Core", "Calculator.Core\Calculator.Core.csproj", "{9E17DC94-901A-4D6D-BCF7-2444D6197AB6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.API", "Calculator.API\Calculator.API\Calculator.API.csproj", "{6F1EF678-9246-4E2F-A131-02C78F3FDB64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.API", "Calculator.API\Calculator.API.csproj", "{6F1EF678-9246-4E2F-A131-02C78F3FDB64}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Test", "Calculator.Test\Calculator.Test.csproj", "{095C00CF-77BA-445A-B9E2-C4A03ECCD193}"
 EndProject

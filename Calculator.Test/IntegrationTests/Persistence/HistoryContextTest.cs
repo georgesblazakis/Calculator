@@ -14,7 +14,7 @@ namespace Calculator.Test.IntegrationTests.Persistence
         public async Task SaveChangesAsync_ShouldCreateNewData()
         {
             var historic = new History { HistoryId = 10, CalcHistory = "5 + 5 = 10" };
-            historyContext.History.Add(historic);
+            historyContext.Histories.Add(historic);
 
             await historyContext.SaveChangesAsync();
             historic.HistoryId.Equals(5);

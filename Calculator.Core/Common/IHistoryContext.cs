@@ -9,7 +9,7 @@ namespace Calculator.Core.Common
 {
     public interface IHistoryContext
     {
-        public DbSet<History> History { get; set; }
+        public DbSet<History> Histories { get; set; }
         Task<int> SaveChangesAsync();
     }
 }

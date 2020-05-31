@@ -49,18 +49,25 @@ namespace Calculator.API
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
-           
-            app.UseOpenApi();
-            //app.UseSwaggerUi3();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
+            app.UseHttpsRedirection();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            //app.UseHttpsRedirection();
+
+            app.UseOpenApi();
             app.UseSwaggerUi3(settings =>
             {
                 settings.Path = "/api";
             });
-            app.UseRouting();
+           // app.UseRouting();
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

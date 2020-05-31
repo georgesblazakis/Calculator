@@ -23,6 +23,7 @@ namespace Calculator.Core.Commands
                 var calc = new CalculatorDomain();
                 var result = calc.Sum(n1, n2);
                 historyContext.Histories.Add(new History() { CalcHistory = $"{n1} + {n2} = {result}" });
+                historyContext.SaveChangesAsync();
                 return result; 
             }
             catch (Exception)
@@ -38,6 +39,7 @@ namespace Calculator.Core.Commands
                 var calc = new CalculatorDomain();
                 var result = calc.Sub(n1, n2);
                 historyContext.Histories.Add(new History() { CalcHistory = $"{n1} - {n2} = {result}" });
+                historyContext.SaveChangesAsync();
                 return result;
             }
             catch (Exception)
@@ -52,6 +54,7 @@ namespace Calculator.Core.Commands
                 var calc = new CalculatorDomain();
                 var result = calc.Mult(n1, n2);
                 historyContext.Histories.Add(new History() { CalcHistory = $"{n1} * {n2} = {result}" });
+                historyContext.SaveChangesAsync();
                 return result;
             }
             catch (Exception)
@@ -69,6 +72,7 @@ namespace Calculator.Core.Commands
                 var calc = new CalculatorDomain();
                 var result = calc.Div(n1, n2);
                 historyContext.Histories.Add(new History() { CalcHistory = $"{n1} / {n2} = {result}" });
+                historyContext.SaveChangesAsync();
                 return result;
 
             }

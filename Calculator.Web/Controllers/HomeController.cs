@@ -17,11 +17,15 @@ namespace Calculator.Web.Controllers
         {
             _logger = logger;
         }
-
+        
         public IActionResult Index()
         {
             return View();
         }
+        //public IActionResult CalculatorFunctions()
+        //{
+        //    return View();
+        //}
 
         public IActionResult Privacy()
         {

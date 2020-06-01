@@ -5,38 +5,44 @@
 
 <div class="text-center">
 
-    <div class="calculator">
+    <div id="content">
+        <div class="calculator" id="calculator">
 
-        <input type="text" class="calculator-screen" value="0" disabled />
+            <input type="text" id="valueScreen" class="calculator-screen" disabled />
 
-        <div class="calculator-keys">
+            <div class="calculator-keys">
 
-            <button type="button" class="operator" value="+" onclick ="Test()">+</button>
-            <button type="button" class="operator" value="-">-</button>
-            <button type="button" class="operator" value="*">&times;</button>
-            <button type="button" class="operator" value="/">&divide;</button>
+                <div id="load" class="none">
+                    <img src="~/img/Ajax-Preloader.gif" width="250" height="180"/>
+                </div>
 
-            <button type="button" value="7">7</button>
-            <button type="button" value="8">8</button>
-            <button type="button" value="9">9</button>
+                <button type="button" onclick="getOperation('+')" class="operator" value="+">+</button>
+                <button type="button" onclick="getOperation('-')" class="operator" value="-">-</button>
+                <button type="button" onclick="getOperation('*')" class="operator" value="*">&times;</button>
+                <button type="button" onclick="getOperation('/')" class="operator" value="/">&divide;</button>
 
-
-            <button type="button" value="4">4</button>
-            <button type="button" value="5">5</button>
-            <button type="button" value="6">6</button>
-
-
-            <button type="button" value="1">1</button>
-            <button type="button" value="2">2</button>
-            <button type="button" value="3">3</button>
+                <button type="button" onclick="getNumber('7')" value="7">7</button>
+                <button type="button" onclick="getNumber('8')" value="8">8</button>
+                <button type="button" onclick="getNumber('9')" value="9">9</button>
 
 
-            <button type="button" value="0">0</button>
-            <button type="button" class="decimal" value=".">.</button>
-            <button type="button" class="all-clear" value="all-clear">AC</button>
+                <button type="button" onclick="getNumber('4')" value="4">4</button>
+                <button type="button" onclick="getNumber('5')" value="5">5</button>
+                <button type="button" onclick="getNumber('6')" value="6">6</button>
 
-            <button type="button" class="equal-sign" value="=">=</button>
 
+                <button type="button" onclick="getNumber('1')" value="1">1</button>
+                <button type="button" onclick="getNumber('2')" value="2">2</button>
+                <button type="button" onclick="getNumber('3')" value="3">3</button>
+
+
+                <button type="button" onclick="getNumber('0')" value="0">0</button>
+                <button type="button" onclick="getDecimal()" class="decimal" value=".">.</button>
+                <button type="button" onclick="cleanScreen()" class="all-clear">AC</button>
+
+                <button type="button" onclick="getOperation('=')" class="equal-sign" value="=">=</button>
+
+            </div>
         </div>
     </div>
 </div>

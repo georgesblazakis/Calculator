@@ -67,7 +67,7 @@ namespace Calculator.Test.UnitTests.Application
         [InlineData(10, 0)]
         public void GivenTwoNumbers_ShouldException(Decimal number1, Decimal number2)
         {
-            Assert.Throws<Exception>(() => calculatorFunctionsCommandHandler.HandleDiv(number1, number2));
+            Assert.Throws<FunctionsException>(() => calculatorFunctionsCommandHandler.HandleDiv(number1, number2));
 
         }
 

@@ -31,6 +31,7 @@ namespace Calculator.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddDbContext<HistoryContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
             services.AddScoped<IHistoryContext, HistoryContext>();
@@ -52,22 +53,19 @@ namespace Calculator.API
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseAuthorization();
 
-            //app.UseHttpsRedirection();
 
             app.UseOpenApi();
             app.UseSwaggerUi3(settings =>
             {
                 settings.Path = "/api";
             });
-           // app.UseRouting();
-
-            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

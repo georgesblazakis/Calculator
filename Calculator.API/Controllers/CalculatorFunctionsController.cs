@@ -24,8 +24,6 @@ namespace Calculator.API.Controllers
         [Route("Sum")]
         public async Task<IActionResult> Sum(decimal number1, decimal number2)
         {
-            //command.HandleSum(number1, number2);
-
             return Ok(command.HandleSum(number1, number2)); 
         }
 
@@ -34,26 +32,25 @@ namespace Calculator.API.Controllers
         [Route("Sub")]
         public async Task<IActionResult> Sub(decimal number1, decimal number2)
         {
-            command.HandleSub(number1, number2);
-
-            return null;
+            return Ok(command.HandleSub(number1, number2));
         }
 
         // POST-MULT: api/CalculatorFunctions
         [HttpPost]
         [Route("Mult")]
 
-        public void Mult(decimal number1, decimal number2)
+        public async Task<IActionResult> Mult(decimal number1, decimal number2)
         {
-            command.HandleMult(number1, number2);
+            return Ok(command.HandleMult(number1, number2));
 
         }
         // POST-DIV: api/CalculatorFunctions
         [HttpPost]
         [Route("Div")]
-        public void Div(decimal number1, decimal number2)
+        public async Task<IActionResult> Div(decimal number1, decimal number2)
         {
-            command.HandleDiv(number1, number2);
+            return Ok(command.HandleDiv(number1, number2));
+            
 
         }
     }

@@ -69,3 +69,13 @@ button {
     grid-gap: 20px;
     padding: 20px;
 }
+
+.loading {
+    display: flex;
+    position: absolute;
+    margin: 53px;
+}
+
+.none {
+    display: none;
+}
